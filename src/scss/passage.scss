@@ -1,0 +1,21 @@
+.passage {
+  transform: translateY(0);
+  transition: 100ms transform, 100ms opacity;
+}
+
+#passages {
+  position: relative;
+}
+
+.passage-out {
+  position: absolute;
+}
+
+.passage-in {
+  transform: translateY(50px);
+}
+
+.passage-in,
+.passage-out {
+  opacity: 0;
+}

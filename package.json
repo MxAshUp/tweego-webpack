@@ -1,0 +1,35 @@
+{
+  "name": "tweego-webpack-template",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:webpack && npm run build:tweego && npm run build:assets && npm run build:cleanup",
+    "build:no-cleanup": "npm run build:webpack && npm run build:tweego",
+    "build:assets": "cp -R assets dist/",
+    "build:webpack": "npx webpack",
+    "build:tweego": "./vendor/tweego --format=sugarcube-2 --output=./dist/index.html ./src/twee/",
+    "build:cleanup": "rm -f ./src/twee/*-dist.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DustinWoods/tweego-webpack.git"
+  },
+  "author": "Dustin Woods",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/runtime": "^7.3.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "resolve-url-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "yaml": "^1.3.1"
+  },
+  "dependencies": {}
+}

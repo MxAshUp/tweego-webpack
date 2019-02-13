@@ -1,0 +1,3 @@
+::StoryMenu
+<<if State.length > 1>><<back "Back">><</if>>
+[[Start]]
