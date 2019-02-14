@@ -1,5 +1,5 @@
 import registerAlert from './macros/alert';
-import registerTitleMatchProperties from './libs/title-match-properties';
+import registerTitleMatchProperties from 'sugarcube-yaml-properties';
 import registerHeader from'./components/header';
 
 ((Config, State, Story, Engine, Dialog, $document) => {
@@ -13,7 +13,7 @@ import registerHeader from'./components/header';
 	registerAlert(Macro, Dialog);
 
 	// Register plugin modules
-	registerTitleMatchProperties(State, Story, $document);
+	registerTitleMatchProperties({ State, Story, $document });
 
 	// Register components
 	registerHeader($document);
